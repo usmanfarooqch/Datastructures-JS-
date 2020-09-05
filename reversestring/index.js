@@ -33,4 +33,39 @@
 // }
 
 
-module.exports = reverse;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+reverse("usman");
+function reverse(str)
+{
+    console.log(str.split("").reverse().join(""))
+}
+
+// module.exports = reverse;

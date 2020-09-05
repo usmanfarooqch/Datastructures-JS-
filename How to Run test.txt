@@ -1,0 +1,2 @@
+Go to specfic problem's folder and then run command
+jest test.js
