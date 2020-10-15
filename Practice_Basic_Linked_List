@@ -1,0 +1,42 @@
+class Node {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+class LinkList {
+    constructor() { this.head = null }
+    addNode(data) {
+        let node = new Node(data);
+        if (this.head === null) {
+            this.head = node;
+        }
+        else {
+            let start = this.head;
+            while (true) {
+                if (start.next === null) {
+                    start.next = node;
+                    break;
+                }
+                start = start.next
+            }
+        }
+    }
+    getNodes() {
+
+        let start = this.head;
+        while (true) {
+            console.log(start.data);
+            if (start.next === null) {
+                break;
+            }
+            start = start.next
+        }
+    }
+}
+let linkList = new LinkList();
+linkList.addNode("1");
+linkList.addNode("2");
+linkList.addNode("3");
+linkList.addNode("4");
+linkList.getNodes();
