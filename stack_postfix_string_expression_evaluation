@@ -1,0 +1,43 @@
+class Node {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+class Stack {
+    constructor() { this.top = null }
+    push(data) {
+        let node = new Node(data);
+        node.next=this.top;
+        this.top=node;
+    }
+    pop() {
+
+        let data = this.top.data;
+        this.top = this.top.next;
+        return data;
+
+    }
+}
+
+
+function isNumber(params) {
+    return (params>='0' && params<=9) ? true : false
+}
+let str = "45+72-*";
+let stack = new Stack();
+for(let char of str)
+{
+    if(isNumber(char))
+    {
+        stack.push(char);
+    }
+    else{
+        let op2 = stack.pop();
+        let op1 = stack.pop();
+        stack.push(eval(op1+char+op2))
+    }
+}
+console.log(stack)
+
+
