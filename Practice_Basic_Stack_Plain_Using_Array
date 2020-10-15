@@ -1,0 +1,27 @@
+class Stack {
+    constructor() {
+        this.arr = [];
+        this.top = 0;
+    }
+
+    push(data) {
+        this.arr[this.top] = data;
+        console.log(this.arr)
+        this.top++;
+    }
+    pop() {
+        console.log(this.arr[this.top-1]);
+        this.top--;
+    }
+}
+let stack = new Stack();
+
+stack.push("1");
+stack.push("2");
+stack.push("3");
+stack.push("4");
+stack.pop();
+stack.pop();
+stack.pop();
+stack.pop();
+stack.pop();
