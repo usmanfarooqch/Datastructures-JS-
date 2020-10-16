@@ -1,0 +1,66 @@
+
+
+class Queue {
+    constructor() {
+        this.arr = [];
+        this.frontIndex = 0;
+        this.currentIndex = 0;
+    }
+    enqueue(data) {
+        if (this.currentIndex >= 9) {
+            this.currentIndex = 0;
+          
+            if (this.arr[this.currentIndex] === '') {
+                this.arr[this.currentIndex] = data;
+                this.currentIndex++;
+            }
+            else{
+                console.log("queue is full");
+            }
+        }
+        else {
+            this.arr[this.currentIndex] = data;
+            this.currentIndex++;
+        }
+    }
+    front() {
+        if(this.frontIndex>=9){
+            this.frontIndex=0;
+            console.log(this.arr[this.frontIndex]);
+            this.arr[this.frontIndex]='';
+            this.frontIndex++;
+        }
+        else{
+        console.log(this.arr[this.frontIndex]);
+        this.arr[this.frontIndex]='';
+        this.frontIndex++;
+    }
+}
+}
+
+let queue = new Queue();
+queue.enqueue("a");
+queue.enqueue("b");
+queue.enqueue("c");
+queue.enqueue("d");
+queue.enqueue("e");
+queue.enqueue("f");
+queue.enqueue("g");
+queue.enqueue("h");
+queue.enqueue("i");
+queue.front();
+queue.front();
+queue.front();
+queue.front();
+queue.front();
+queue.front();
+queue.front();
+queue.front();
+queue.front();
+queue.enqueue("j");
+queue.enqueue("k");
+queue.enqueue("l");
+queue.front();
+queue.front();
+queue.front();
+
